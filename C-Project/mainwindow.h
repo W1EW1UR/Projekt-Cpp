@@ -25,5 +25,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    void loadDataIntoListWidget(); // Deklaracja funkcji
 };
 #endif // MAINWINDOW_H
