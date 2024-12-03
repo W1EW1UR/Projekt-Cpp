@@ -6,9 +6,16 @@ Okno2::Okno2(QWidget *parent)
     , ui(new Ui::Okno2)
 {
     ui->setupUi(this);
+
 }
 
 Okno2::~Okno2()
 {
     delete ui;
 }
+
+void Okno2::on_pushButton_clicked()
+{
+
+}
+

@@ -2,6 +2,8 @@
 #define OKNO2_H
 
 #include <QDialog>
+#include <QtSql>
+#include <QFileInfo>
 
 namespace Ui {
 class Okno2;
@@ -14,6 +16,9 @@ class Okno2 : public QDialog
 public:
     explicit Okno2(QWidget *parent = nullptr);
     ~Okno2();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::Okno2 *ui;
