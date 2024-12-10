@@ -2,6 +2,8 @@
 #include "okno2.h"
 #include <QPixmap>
 #include <QTimer>
+#include <QDir>
+#include <QCoreApplication>
 #include "./ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -9,9 +11,18 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    // Zmienia się
-   // QPixmap pix("Logo.png");
-   // ui->Zdjecie->setPixmap(pix.scaled(200,250,Qt::KeepAspectRatio));
+
+    // Ustawianie głównej ścieżki
+    QString path = QDir::currentPath();
+    QDir dir(path);
+
+    while (!dir.isRoot()) { // Dopóki nie dotrzesz do katalogu głównego
+        if (dir.dirName() == "Projekt") { // Sprawdź, czy aktualny katalog to "Projekt"
+            pro_path =
+            break;
+        }
+        dir.cdUp(); // Przejdź do katalogu nadrzędnego
+    }
 
 
 
@@ -20,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     QSqlDatabase baza = QSqlDatabase::addDatabase("QSQLITE");
     baza.setDatabaseName("C:\\Users\\kapim\\Desktop\\procpp\\Projekt\\szpital.db");
     if(baza.open())
-        ui->label->setText("[+] POŁĄCZONO ");
+        ui->label->setText("[+] POŁĄCZONO Z BAZĄ DANYCH ");
     else
         ui->label->setText("[-] NIE POŁĄCZONO Z BAZĄ DANYCH");
     //========================================================
@@ -51,12 +62,61 @@ void MainWindow::loadDataIntoListWidget()
     ui->listWidget->clear();  // Wyczyść listę przed ponownym dodaniem elementów
 
     QSqlQuery qry;
-    if(qry.exec("SELECT imie, nazwisko FROM rejestr")) {
+    if(qry.exec("SELECT * FROM rejestr")) {
         while(qry.next()) {
-            QString imie = qry.value("imie").toString();
-            QString nazwisko = qry.value("nazwisko").toString();
-            ui->listWidget->addItem(imie + " " + nazwisko);  // Dodaj do listy
+            QString imie,nazwisko,pokoj,pesel;
+            imie = qry.value("imie").toString();
+            nazwisko = qry.value("nazwisko").toString();
+            pokoj = qry.value("nr").toString();
+            pesel = qry.value("pesel").toString();
+            int id = qry.value("id").toInt();
+
+            QListWidgetItem *item = new QListWidgetItem(imie +" "+ nazwisko);
+            item -> setData(Qt::UserRole, id);
+            item -> setData(Qt::UserRole+1, imie);
+            item -> setData(Qt::UserRole+2, nazwisko);
+            item -> setData(Qt::UserRole+3, pokoj);
+            item -> setData(Qt::UserRole+4, pesel);
+
+            ui->listWidget->addItem(item);  // Dodaj do listy
         }
     }
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QSqlQuery qry;
+
+    qry.prepare("DELETE FROM rejestr WHERE id = :id");
+    qry.bindValue(":id", id_pacjenta);
+
+
+    if(qry.exec())
+    {
+        ui->err_label->setText("Pomyślnie usuninięto dane");
+        loadDataIntoListWidget();
+    }
+    else
+    {
+        ui->err_label->setText("Błąd: Nie udało się usunąć danych");
+    }
+
+}
+
+
+void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
+{
+    id_pacjenta = item->data(Qt::UserRole).toInt();
+    ui->textEdit->setText(item->data(Qt::UserRole+1).toString());
+    ui->textEdit_2->setText(item->data(Qt::UserRole+2).toString());
+    ui->textEdit_3->setText(item->data(Qt::UserRole+3).toString());
+    ui->textEdit_4->setText(item->data(Qt::UserRole+4).toString());
+
+
+    // Zdjęcie
+    qDebug() << "Bieżący katalog roboczy 2 :" << pro_path;
+    QPixmap pix("..//Zdjęcia//placeholder.jpg");
+    ui->Zdjecie->setPixmap(pix);
 }
 

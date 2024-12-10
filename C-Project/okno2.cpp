@@ -26,12 +26,11 @@ void Okno2::on_pushButton_clicked()
 
 
     QSqlQuery qry;
-    qry.prepare("insert into rejestr values ('"+imie+"','"+nazwisko+"',"+pesel+","+pokoj+")");
+    qry.prepare("insert into rejestr (imie,nazwisko,pesel,nr) values ('"+imie+"','"+nazwisko+"',"+pesel+","+pokoj+");");
     if(qry.exec())
     {
         QMessageBox::critical(this,tr("save"),tr("saved"));
         emit dataAdded();
-        baza.close();
     }
     else
     {
