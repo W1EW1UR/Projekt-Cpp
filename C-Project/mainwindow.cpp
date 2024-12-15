@@ -15,21 +15,24 @@ MainWindow::MainWindow(QWidget *parent)
     // Ustawianie głównej ścieżki
     QString path = QDir::currentPath();
     QDir dir(path);
-
     while (!dir.isRoot()) { // Dopóki nie dotrzesz do katalogu głównego
         if (dir.dirName() == "Projekt") { // Sprawdź, czy aktualny katalog to "Projekt"
-            pro_path =
+            pro_path = dir.path();
+            qDebug() <<"Ścieżka projektu: "<<pro_path;
             break;
         }
         dir.cdUp(); // Przejdź do katalogu nadrzędnego
     }
 
 
-
+  // C:\Users\kapim\Desktop\procpp\Projekt\szpital.db
     //========================================================
     //SQLITE =================================================
     QSqlDatabase baza = QSqlDatabase::addDatabase("QSQLITE");
-    baza.setDatabaseName("C:\\Users\\kapim\\Desktop\\procpp\\Projekt\\szpital.db");
+    QDir DBfile_path =pro_path.absoluteFilePath("szpital.db");
+    qDebug() << "2  " <<DBfile_path;
+
+    baza.setDatabaseName(DBfile_path.absolutePath());
     if(baza.open())
         ui->label->setText("[+] POŁĄCZONO Z BAZĄ DANYCH ");
     else
@@ -115,8 +118,11 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 
 
     // Zdjęcie
-    qDebug() << "Bieżący katalog roboczy 2 :" << pro_path;
-    QPixmap pix("..//Zdjęcia//placeholder.jpg");
-    ui->Zdjecie->setPixmap(pix);
+    QDir img_path = pro_path.absolutePath() + "/Zdjęcia";
+    qDebug() << "Bieżący katalog roboczy 2 :" << img_path;
+
+    QPixmap pix(img_path.absoluteFilePath("placeholder.jpg"));
+
+    ui->zdj_pacjenta->setPixmap(pix.scaled(ui->zdj_pacjenta->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 }
 

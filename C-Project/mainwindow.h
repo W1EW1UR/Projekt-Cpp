@@ -33,7 +33,7 @@ private:
 
     int id_pacjenta = -1;
 
-    QString pro_path = "";
+    QDir pro_path;
 
     void loadDataIntoListWidget(); // Deklaracja funkcji
 };

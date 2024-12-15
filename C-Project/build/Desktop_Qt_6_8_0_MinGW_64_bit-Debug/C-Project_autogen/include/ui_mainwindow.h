@@ -12,11 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,11 +26,21 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QListView *listView;
     QPushButton *pushButton;
     QPushButton *pushButton_3;
     QPushButton *pushButton_2;
-    QLabel *Zdjecie;
+    QLabel *label;
+    QListWidget *listWidget;
+    QLabel *err_label;
+    QLabel *zdj_pacjenta;
+    QTextEdit *textEdit;
+    QLabel *label_imie;
+    QLabel *label_nazwisko;
+    QTextEdit *textEdit_2;
+    QLabel *label_nr_2;
+    QTextEdit *textEdit_3;
+    QLabel *label_pesel;
+    QTextEdit *textEdit_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -40,10 +51,6 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        listView = new QListView(centralwidget);
-        listView->setObjectName("listView");
-        listView->setEnabled(true);
-        listView->setGeometry(QRect(180, 20, 256, 361));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
         pushButton->setEnabled(true);
@@ -61,10 +68,56 @@ public:
         pushButton_2->setEnabled(true);
         pushButton_2->setGeometry(QRect(20, 180, 141, 51));
         pushButton_2->setFont(font);
-        Zdjecie = new QLabel(centralwidget);
-        Zdjecie->setObjectName("Zdjecie");
-        Zdjecie->setEnabled(true);
-        Zdjecie->setGeometry(QRect(520, 30, 200, 250));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setEnabled(true);
+        label->setGeometry(QRect(10, 520, 291, 31));
+        listWidget = new QListWidget(centralwidget);
+        listWidget->setObjectName("listWidget");
+        listWidget->setGeometry(QRect(180, 30, 161, 301));
+        err_label = new QLabel(centralwidget);
+        err_label->setObjectName("err_label");
+        err_label->setEnabled(true);
+        err_label->setGeometry(QRect(180, 340, 191, 31));
+        zdj_pacjenta = new QLabel(centralwidget);
+        zdj_pacjenta->setObjectName("zdj_pacjenta");
+        zdj_pacjenta->setGeometry(QRect(360, 30, 171, 211));
+        textEdit = new QTextEdit(centralwidget);
+        textEdit->setObjectName("textEdit");
+        textEdit->setEnabled(true);
+        textEdit->setGeometry(QRect(550, 50, 181, 31));
+        textEdit->setMouseTracking(false);
+        textEdit->setReadOnly(true);
+        label_imie = new QLabel(centralwidget);
+        label_imie->setObjectName("label_imie");
+        label_imie->setGeometry(QRect(550, 30, 141, 21));
+        label_nazwisko = new QLabel(centralwidget);
+        label_nazwisko->setObjectName("label_nazwisko");
+        label_nazwisko->setGeometry(QRect(550, 90, 141, 21));
+        textEdit_2 = new QTextEdit(centralwidget);
+        textEdit_2->setObjectName("textEdit_2");
+        textEdit_2->setEnabled(true);
+        textEdit_2->setGeometry(QRect(550, 110, 181, 31));
+        textEdit_2->setMouseTracking(false);
+        textEdit_2->setReadOnly(true);
+        label_nr_2 = new QLabel(centralwidget);
+        label_nr_2->setObjectName("label_nr_2");
+        label_nr_2->setGeometry(QRect(550, 150, 141, 21));
+        textEdit_3 = new QTextEdit(centralwidget);
+        textEdit_3->setObjectName("textEdit_3");
+        textEdit_3->setEnabled(true);
+        textEdit_3->setGeometry(QRect(550, 170, 181, 31));
+        textEdit_3->setMouseTracking(false);
+        textEdit_3->setReadOnly(true);
+        label_pesel = new QLabel(centralwidget);
+        label_pesel->setObjectName("label_pesel");
+        label_pesel->setGeometry(QRect(550, 210, 141, 21));
+        textEdit_4 = new QTextEdit(centralwidget);
+        textEdit_4->setObjectName("textEdit_4");
+        textEdit_4->setEnabled(true);
+        textEdit_4->setGeometry(QRect(550, 230, 181, 31));
+        textEdit_4->setMouseTracking(false);
+        textEdit_4->setReadOnly(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -85,7 +138,13 @@ public:
         pushButton->setText(QCoreApplication::translate("MainWindow", "Wybierz", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Dodaj", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Usu\305\204", nullptr));
-        Zdjecie->setText(QString());
+        label->setText(QCoreApplication::translate("MainWindow", "\305\202\304\205czenie z baz\304\205 danych ...", nullptr));
+        err_label->setText(QString());
+        zdj_pacjenta->setText(QString());
+        label_imie->setText(QCoreApplication::translate("MainWindow", "Imie:", nullptr));
+        label_nazwisko->setText(QCoreApplication::translate("MainWindow", "Nazwisko:", nullptr));
+        label_nr_2->setText(QCoreApplication::translate("MainWindow", "Nr. Pokoju:", nullptr));
+        label_pesel->setText(QCoreApplication::translate("MainWindow", "Pesel:", nullptr));
     } // retranslateUi
 
 };

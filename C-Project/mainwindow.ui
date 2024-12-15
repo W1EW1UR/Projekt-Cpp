@@ -77,22 +77,6 @@
      <string>Usuń</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Zdjecie">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>30</y>
-      <width>200</width>
-      <height>250</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="enabled">
      <bool>true</bool>
@@ -138,10 +122,10 @@
    <widget class="QLabel" name="zdj_pacjenta">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>360</x>
       <y>30</y>
-      <width>141</width>
-      <height>191</height>
+      <width>171</width>
+      <height>211</height>
      </rect>
     </property>
     <property name="text">
