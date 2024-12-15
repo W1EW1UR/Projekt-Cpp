@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "okno2.h"
+#include "logowanie.h"
+
+#include <QMessageBox>
 #include <QPixmap>
 #include <QTimer>
 #include <QDir>
@@ -89,22 +92,26 @@ void MainWindow::loadDataIntoListWidget()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QSqlQuery qry;
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Potwierdzenie", "Czy na pewno chcesz usunąć dane?", QMessageBox::Yes|QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        QSqlQuery qry;
 
-    qry.prepare("DELETE FROM rejestr WHERE id = :id");
-    qry.bindValue(":id", id_pacjenta);
+        qry.prepare("DELETE FROM rejestr WHERE id = :id");
+        qry.bindValue(":id", id_pacjenta);
 
 
-    if(qry.exec())
-    {
-        ui->err_label->setText("Pomyślnie usuninięto dane");
-        loadDataIntoListWidget();
+        if(qry.exec())
+        {
+            ui->err_label->setText("Pomyślnie usuninięto dane");
+            loadDataIntoListWidget();
+        }
+        else
+        {
+            ui->err_label->setText("Błąd: Nie udało się usunąć danych");
+        }
+
     }
-    else
-    {
-        ui->err_label->setText("Błąd: Nie udało się usunąć danych");
-    }
-
 }
 
 
@@ -124,5 +131,45 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
     QPixmap pix(img_path.absoluteFilePath("placeholder.jpg"));
 
     ui->zdj_pacjenta->setPixmap(pix.scaled(ui->zdj_pacjenta->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+}
+
+
+void MainWindow::on_back_clicked()
+{
+    this -> close();
+    logowanie *log = new logowanie();
+    log->show();
+}
+
+
+
+void MainWindow::on_edit_clicked()
+{
+    QSqlQuery qry;
+
+    QString imie,nazwisko,nr,pesel;
+    imie = ui->textEdit->toPlainText();
+    nazwisko = ui->textEdit_2->toPlainText();
+    nr = ui->textEdit_3->toPlainText();
+    pesel = ui->textEdit_4->toPlainText();
+
+    qry.prepare("UPDATE rejestr SET imie = :imie, nazwisko = :nazwisko, nr = :nr, pesel = :pesel WHERE id=:id");
+
+    qry.bindValue(      ":id", id_pacjenta);
+    qry.bindValue(    ":imie", imie);
+    qry.bindValue(":nazwisko", nazwisko);
+    qry.bindValue(      ":nr", nr.toInt());
+    qry.bindValue(   ":pesel", pesel.toInt());
+
+    if(qry.exec())
+    {
+        QMessageBox::information(this,"Edycja danych","Zapisano zmiane danych");
+
+    }
+    else
+    {
+        QMessageBox::critical(this,tr("error"),qry.lastError().text());
+    }
+
 }
 

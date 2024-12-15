@@ -26,7 +26,6 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
     QPushButton *pushButton_3;
     QPushButton *pushButton_2;
     QLabel *label;
@@ -41,6 +40,8 @@ public:
     QTextEdit *textEdit_3;
     QLabel *label_pesel;
     QTextEdit *textEdit_4;
+    QPushButton *back;
+    QPushButton *edit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -51,17 +52,12 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setEnabled(true);
-        pushButton->setGeometry(QRect(20, 20, 141, 51));
-        QFont font;
-        font.setPointSize(14);
-        pushButton->setFont(font);
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName("pushButton_3");
         pushButton_3->setEnabled(true);
         pushButton_3->setGeometry(QRect(20, 110, 141, 51));
+        QFont font;
+        font.setPointSize(14);
         pushButton_3->setFont(font);
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName("pushButton_2");
@@ -87,7 +83,7 @@ public:
         textEdit->setEnabled(true);
         textEdit->setGeometry(QRect(550, 50, 181, 31));
         textEdit->setMouseTracking(false);
-        textEdit->setReadOnly(true);
+        textEdit->setReadOnly(false);
         label_imie = new QLabel(centralwidget);
         label_imie->setObjectName("label_imie");
         label_imie->setGeometry(QRect(550, 30, 141, 21));
@@ -99,7 +95,7 @@ public:
         textEdit_2->setEnabled(true);
         textEdit_2->setGeometry(QRect(550, 110, 181, 31));
         textEdit_2->setMouseTracking(false);
-        textEdit_2->setReadOnly(true);
+        textEdit_2->setReadOnly(false);
         label_nr_2 = new QLabel(centralwidget);
         label_nr_2->setObjectName("label_nr_2");
         label_nr_2->setGeometry(QRect(550, 150, 141, 21));
@@ -108,7 +104,7 @@ public:
         textEdit_3->setEnabled(true);
         textEdit_3->setGeometry(QRect(550, 170, 181, 31));
         textEdit_3->setMouseTracking(false);
-        textEdit_3->setReadOnly(true);
+        textEdit_3->setReadOnly(false);
         label_pesel = new QLabel(centralwidget);
         label_pesel->setObjectName("label_pesel");
         label_pesel->setGeometry(QRect(550, 210, 141, 21));
@@ -117,7 +113,17 @@ public:
         textEdit_4->setEnabled(true);
         textEdit_4->setGeometry(QRect(550, 230, 181, 31));
         textEdit_4->setMouseTracking(false);
-        textEdit_4->setReadOnly(true);
+        textEdit_4->setReadOnly(false);
+        back = new QPushButton(centralwidget);
+        back->setObjectName("back");
+        back->setEnabled(true);
+        back->setGeometry(QRect(20, 20, 141, 51));
+        back->setFont(font);
+        edit = new QPushButton(centralwidget);
+        edit->setObjectName("edit");
+        edit->setEnabled(true);
+        edit->setGeometry(QRect(550, 280, 141, 51));
+        edit->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -135,7 +141,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Wybierz", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Dodaj", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Usu\305\204", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\305\202\304\205czenie z baz\304\205 danych ...", nullptr));
@@ -145,6 +150,8 @@ public:
         label_nazwisko->setText(QCoreApplication::translate("MainWindow", "Nazwisko:", nullptr));
         label_nr_2->setText(QCoreApplication::translate("MainWindow", "Nr. Pokoju:", nullptr));
         label_pesel->setText(QCoreApplication::translate("MainWindow", "Pesel:", nullptr));
+        back->setText(QCoreApplication::translate("MainWindow", "Wr\303\263\304\207", nullptr));
+        edit->setText(QCoreApplication::translate("MainWindow", "Edytuj", nullptr));
     } // retranslateUi
 
 };

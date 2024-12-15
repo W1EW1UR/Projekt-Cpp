@@ -318,9 +318,21 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/logowanie.h",
+			"MU",
+			"EWIEGA46WW/moc_logowanie.cpp",
+			null
+		],
+		[
 			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow_podglad.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow_podglad.cpp",
 			null
 		],
 		[
@@ -404,12 +416,22 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/logowanie.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow_podglad.cpp",
 			"MU",
 			null
 		],

@@ -24,6 +24,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         okno2.h okno2.cpp okno2.ui
+        mainwindow_podglad.h mainwindow_podglad.cpp mainwindow_podglad.ui
+        logowanie.h logowanie.cpp logowanie.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET C-Project APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

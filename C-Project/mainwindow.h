@@ -28,6 +28,10 @@ private slots:
 
     void on_listWidget_itemClicked(QListWidgetItem *item);
 
+    void on_back_clicked();
+
+    void on_edit_clicked();
+
 private:
     Ui::MainWindow *ui;
 
