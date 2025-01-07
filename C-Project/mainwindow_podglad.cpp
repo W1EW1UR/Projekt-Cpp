@@ -16,7 +16,8 @@ MainWindow_podglad::MainWindow_podglad(QWidget *parent) :
     QString path = QDir::currentPath();
     QDir dir(path);
     while (!dir.isRoot()) { // Dopóki nie dotrzesz do katalogu głównego
-        if (dir.dirName() == "Projekt") { // Sprawdź, czy aktualny katalog to "Projekt"
+        if (dir.dirName() == "C-Project") { // Sprawdź, czy aktualny katalog to "Projekt"
+            dir.cdUp();
             pro_path = dir.path();
             qDebug() <<"Ścieżka projektu: "<<pro_path;
             break;
