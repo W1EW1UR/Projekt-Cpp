@@ -17,11 +17,12 @@ logowanie::~logowanie()
 
 void logowanie::on_pomin_clicked()
 {
+    poziom =0;
     // Ukryj okno dialogowe
     this->hide();
 
     // Otwórz główne okno
-    MainWindow_podglad *mainWindow = new MainWindow_podglad();
+    MainWindow *mainWindow = new MainWindow(poziom,this);
     mainWindow->show();
 
     // Zamknij okno dialogowe (jeśli chcesz, aby dialog nie był dostępny po tym)
@@ -34,10 +35,11 @@ void logowanie::on_zaloguj_clicked()
     login = ui->login->text();
     haslo = ui->haslo->text();
 
-    if(QString::compare(login, "kacper123", Qt::CaseInsensitive) == 0 && haslo =="masło")
+    if(QString::compare(login, "123", Qt::CaseInsensitive) == 0 && haslo =="123")
     {
+        poziom =1;
         this->hide();
-        MainWindow *mainWindow = new MainWindow();
+        MainWindow *mainWindow = new MainWindow(poziom,this);
         mainWindow->show();
         this->close();
     }

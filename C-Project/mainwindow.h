@@ -18,9 +18,16 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(int poziom,QWidget *parent = nullptr);
     ~MainWindow();
 
+    QListWidgetItem *item_pacjent;
+
+    int poziom;
+
+    int id_pacjenta = -1;
+
+    QDir pro_path;
 private slots:
     void on_pushButton_3_clicked();
 
@@ -34,10 +41,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
-    int id_pacjenta = -1;
-
-    QDir pro_path;
 
     void loadDataIntoListWidget(); // Deklaracja funkcji
 };

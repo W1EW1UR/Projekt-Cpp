@@ -61,11 +61,12 @@ void MainWindow_podglad::loadDataIntoListWidget()
     QSqlQuery qry;
     if(qry.exec("SELECT * FROM rejestr")) {
         while(qry.next()) {
-            QString imie,nazwisko,pokoj,pesel;
+            QString imie,nazwisko,pokoj,pesel,opis;
             imie = qry.value("imie").toString();
             nazwisko = qry.value("nazwisko").toString();
             pokoj = qry.value("nr").toString();
             pesel = qry.value("pesel").toString();
+            opis = qry.value("opis").toString();
             int id = qry.value("id").toInt();
 
             QListWidgetItem *item = new QListWidgetItem(imie +" "+ nazwisko);
@@ -74,6 +75,7 @@ void MainWindow_podglad::loadDataIntoListWidget()
             item -> setData(Qt::UserRole+2, nazwisko);
             item -> setData(Qt::UserRole+3, pokoj);
             item -> setData(Qt::UserRole+4, pesel);
+            item -> setData(Qt::UserRole+5, opis);
 
             ui->listWidget->addItem(item);  // Dodaj do listy
         }

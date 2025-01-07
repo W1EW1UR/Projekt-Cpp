@@ -49,7 +49,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(800, 438);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         pushButton_3 = new QPushButton(centralwidget);
@@ -67,7 +67,7 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setEnabled(true);
-        label->setGeometry(QRect(10, 520, 291, 31));
+        label->setGeometry(QRect(10, 360, 291, 31));
         listWidget = new QListWidget(centralwidget);
         listWidget->setObjectName("listWidget");
         listWidget->setGeometry(QRect(180, 30, 161, 301));
@@ -80,7 +80,7 @@ public:
         zdj_pacjenta->setGeometry(QRect(360, 30, 171, 211));
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName("textEdit");
-        textEdit->setEnabled(true);
+        textEdit->setEnabled(false);
         textEdit->setGeometry(QRect(550, 50, 181, 31));
         textEdit->setMouseTracking(false);
         textEdit->setReadOnly(false);
@@ -92,7 +92,7 @@ public:
         label_nazwisko->setGeometry(QRect(550, 90, 141, 21));
         textEdit_2 = new QTextEdit(centralwidget);
         textEdit_2->setObjectName("textEdit_2");
-        textEdit_2->setEnabled(true);
+        textEdit_2->setEnabled(false);
         textEdit_2->setGeometry(QRect(550, 110, 181, 31));
         textEdit_2->setMouseTracking(false);
         textEdit_2->setReadOnly(false);
@@ -101,7 +101,7 @@ public:
         label_nr_2->setGeometry(QRect(550, 150, 141, 21));
         textEdit_3 = new QTextEdit(centralwidget);
         textEdit_3->setObjectName("textEdit_3");
-        textEdit_3->setEnabled(true);
+        textEdit_3->setEnabled(false);
         textEdit_3->setGeometry(QRect(550, 170, 181, 31));
         textEdit_3->setMouseTracking(false);
         textEdit_3->setReadOnly(false);
@@ -110,7 +110,7 @@ public:
         label_pesel->setGeometry(QRect(550, 210, 141, 21));
         textEdit_4 = new QTextEdit(centralwidget);
         textEdit_4->setObjectName("textEdit_4");
-        textEdit_4->setEnabled(true);
+        textEdit_4->setEnabled(false);
         textEdit_4->setGeometry(QRect(550, 230, 181, 31));
         textEdit_4->setMouseTracking(false);
         textEdit_4->setReadOnly(false);
@@ -151,7 +151,7 @@ public:
         label_nr_2->setText(QCoreApplication::translate("MainWindow", "Nr. Pokoju:", nullptr));
         label_pesel->setText(QCoreApplication::translate("MainWindow", "Pesel:", nullptr));
         back->setText(QCoreApplication::translate("MainWindow", "Wr\303\263\304\207", nullptr));
-        edit->setText(QCoreApplication::translate("MainWindow", "Edytuj", nullptr));
+        edit->setText(QCoreApplication::translate("MainWindow", "Podgl\304\205d", nullptr));
     } // retranslateUi
 
 };

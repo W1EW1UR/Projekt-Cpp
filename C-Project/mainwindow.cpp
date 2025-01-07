@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "okno2.h"
 #include "logowanie.h"
+#include "pacjent.h"
 
 #include <QMessageBox>
 #include <QPixmap>
@@ -9,7 +10,7 @@
 #include <QCoreApplication>
 #include "./ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(int poziom,QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
@@ -71,11 +72,12 @@ void MainWindow::loadDataIntoListWidget()
     QSqlQuery qry;
     if(qry.exec("SELECT * FROM rejestr")) {
         while(qry.next()) {
-            QString imie,nazwisko,pokoj,pesel;
+            QString imie,nazwisko,pokoj,pesel,opis;
             imie = qry.value("imie").toString();
             nazwisko = qry.value("nazwisko").toString();
             pokoj = qry.value("nr").toString();
             pesel = qry.value("pesel").toString();
+            opis = qry.value("opis").toString();
             int id = qry.value("id").toInt();
 
             QListWidgetItem *item = new QListWidgetItem(imie +" "+ nazwisko);
@@ -84,11 +86,13 @@ void MainWindow::loadDataIntoListWidget()
             item -> setData(Qt::UserRole+2, nazwisko);
             item -> setData(Qt::UserRole+3, pokoj);
             item -> setData(Qt::UserRole+4, pesel);
+            item -> setData(Qt::UserRole+5, opis);
 
             ui->listWidget->addItem(item);  // Dodaj do listy
         }
     }
 }
+
 
 
 void MainWindow::on_pushButton_2_clicked()
@@ -118,6 +122,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 {
+    item_pacjent = item;
     id_pacjenta = item->data(Qt::UserRole).toInt();
     ui->textEdit->setText(item->data(Qt::UserRole+1).toString());
     ui->textEdit_2->setText(item->data(Qt::UserRole+2).toString());
@@ -139,6 +144,7 @@ void MainWindow::on_back_clicked()
 {
     this -> close();
     logowanie *log = new logowanie();
+
     log->show();
 }
 
@@ -146,31 +152,12 @@ void MainWindow::on_back_clicked()
 
 void MainWindow::on_edit_clicked()
 {
-    QSqlQuery qry;
+    // Tworzymy dialog wyszukiwania i przekazujemy dane
 
-    QString imie,nazwisko,nr,pesel;
-    imie = ui->textEdit->toPlainText();
-    nazwisko = ui->textEdit_2->toPlainText();
-    nr = ui->textEdit_3->toPlainText();
-    pesel = ui->textEdit_4->toPlainText();
+    qDebug() <<"Przed oknem ||"<<"ID:"<<id_pacjenta<<"PATH:"<<pro_path;
+    Pacjent Okno(id_pacjenta,pro_path,poziom ,this);
 
-    qry.prepare("UPDATE rejestr SET imie = :imie, nazwisko = :nazwisko, nr = :nr, pesel = :pesel WHERE id=:id");
-
-    qry.bindValue(      ":id", id_pacjenta);
-    qry.bindValue(    ":imie", imie);
-    qry.bindValue(":nazwisko", nazwisko);
-    qry.bindValue(      ":nr", nr.toInt());
-    qry.bindValue(   ":pesel", pesel.toInt());
-
-    if(qry.exec())
-    {
-        QMessageBox::information(this,"Edycja danych","Zapisano zmiane danych");
-
-    }
-    else
-    {
-        QMessageBox::critical(this,tr("error"),qry.lastError().text());
-    }
-
+    // Ustawiamy modalność i uruchamiamy dialog
+    Okno.setModal(true);
+    Okno.exec();
 }
-

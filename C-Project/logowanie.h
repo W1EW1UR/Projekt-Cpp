@@ -15,6 +15,8 @@ public:
     explicit logowanie(QWidget *parent = nullptr);
     ~logowanie();
 
+    int poziom ;
+
 private slots:
     void on_pomin_clicked();
 

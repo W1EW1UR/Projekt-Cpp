@@ -1,6 +1,7 @@
 C-Project_autogen/timestamp: \
 	C:/Qt/6.8.0/mingw_64/include/QtCore/QDeadlineTimer \
 	C:/Qt/6.8.0/mingw_64/include/QtCore/QDebug \
+	C:/Qt/6.8.0/mingw_64/include/QtCore/QDir \
 	C:/Qt/6.8.0/mingw_64/include/QtCore/QFileInfo \
 	C:/Qt/6.8.0/mingw_64/include/QtCore/QHash \
 	C:/Qt/6.8.0/mingw_64/include/QtCore/QList \
@@ -917,12 +918,12 @@ C-Project_autogen/timestamp: \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/main.cpp \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow.cpp \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow.h \
-	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow_podglad.cpp \
-	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow_podglad.h \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/okno2.cpp \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/okno2.h \
+	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/pacjent.cpp \
+	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/pacjent.h \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/logowanie.ui \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow.ui \
-	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow_podglad.ui \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/okno2.ui \
+	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/pacjent.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

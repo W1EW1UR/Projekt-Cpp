@@ -330,15 +330,15 @@
 			null
 		],
 		[
-			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow_podglad.h",
-			"MU",
-			"EWIEGA46WW/moc_mainwindow_podglad.cpp",
-			null
-		],
-		[
 			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/okno2.h",
 			"MU",
 			"EWIEGA46WW/moc_okno2.cpp",
+			null
+		],
+		[
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/pacjent.h",
+			"MU",
+			"EWIEGA46WW/moc_pacjent.cpp",
 			null
 		]
 	],
@@ -431,12 +431,12 @@
 			null
 		],
 		[
-			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow_podglad.cpp",
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/okno2.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/okno2.cpp",
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/pacjent.cpp",
 			"MU",
 			null
 		]

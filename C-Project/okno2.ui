@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPlainTextEdit" name="plainTextEdit">
+  <widget class="QPlainTextEdit" name="opis">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -27,13 +27,13 @@
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>130</y>
+     <y>140</y>
      <width>41</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Opis</string>
+    <string>OPIS:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
