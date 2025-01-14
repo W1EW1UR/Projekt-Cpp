@@ -10,11 +10,9 @@ Pacjent::Pacjent(int id_pacjenta, QDir pro_path, int poziom, QWidget *parent) :
     id(id_pacjenta),
     path(pro_path)
 {
-    qDebug()<<poziom<<"PRZED";
     ui->setupUi(this);
     if(poziom==0)
     {
-        qDebug()<<poziom<<"SCHOWANY";
         ui->edit->hide();
         ui->textEdit->setDisabled(true);
         ui->textEdit_2->setDisabled(true);
@@ -24,7 +22,6 @@ Pacjent::Pacjent(int id_pacjenta, QDir pro_path, int poziom, QWidget *parent) :
     }
     else
     {
-        qDebug()<<poziom<<"POKAZANY";
         ui->edit->show();
         ui->textEdit->setDisabled(false);
         ui->textEdit_2->setDisabled(false);
@@ -38,8 +35,6 @@ Pacjent::Pacjent(int id_pacjenta, QDir pro_path, int poziom, QWidget *parent) :
     QSqlQuery qry;
     qry.prepare("SELECT * FROM rejestr where id = :id");
     qry.bindValue(":id",id);
-
-    qDebug() <<"Przed załądowaniem:"<<"ID:"<<id<<"PATH:"<<path;
 
     if(qry.exec()) {
         qry.next();

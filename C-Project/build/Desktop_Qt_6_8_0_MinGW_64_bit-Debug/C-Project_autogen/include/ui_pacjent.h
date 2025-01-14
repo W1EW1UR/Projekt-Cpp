@@ -34,11 +34,6 @@ public:
     QPlainTextEdit *opis;
     QLabel *label_pesel_2;
     QPushButton *edit;
-    QLabel *label_nazwisko_2;
-    QTextEdit *textEdit_5;
-    QLabel *zdj_pacjenta_2;
-    QLabel *label_imie_2;
-    QTextEdit *textEdit_6;
 
     void setupUi(QDialog *Pacjent)
     {
@@ -97,27 +92,6 @@ public:
         QFont font;
         font.setPointSize(14);
         edit->setFont(font);
-        label_nazwisko_2 = new QLabel(Pacjent);
-        label_nazwisko_2->setObjectName("label_nazwisko_2");
-        label_nazwisko_2->setGeometry(QRect(470, 300, 141, 21));
-        textEdit_5 = new QTextEdit(Pacjent);
-        textEdit_5->setObjectName("textEdit_5");
-        textEdit_5->setEnabled(true);
-        textEdit_5->setGeometry(QRect(470, 260, 181, 31));
-        textEdit_5->setMouseTracking(false);
-        textEdit_5->setReadOnly(false);
-        zdj_pacjenta_2 = new QLabel(Pacjent);
-        zdj_pacjenta_2->setObjectName("zdj_pacjenta_2");
-        zdj_pacjenta_2->setGeometry(QRect(280, 240, 171, 211));
-        label_imie_2 = new QLabel(Pacjent);
-        label_imie_2->setObjectName("label_imie_2");
-        label_imie_2->setGeometry(QRect(470, 240, 141, 21));
-        textEdit_6 = new QTextEdit(Pacjent);
-        textEdit_6->setObjectName("textEdit_6");
-        textEdit_6->setEnabled(true);
-        textEdit_6->setGeometry(QRect(470, 320, 181, 31));
-        textEdit_6->setMouseTracking(false);
-        textEdit_6->setReadOnly(false);
 
         retranslateUi(Pacjent);
 
@@ -134,9 +108,6 @@ public:
         label_nr_2->setText(QCoreApplication::translate("Pacjent", "Pesel:", nullptr));
         label_pesel_2->setText(QCoreApplication::translate("Pacjent", "Dodatkowe uwagi:", nullptr));
         edit->setText(QCoreApplication::translate("Pacjent", "Edytuj", nullptr));
-        label_nazwisko_2->setText(QCoreApplication::translate("Pacjent", "Nazwisko:", nullptr));
-        zdj_pacjenta_2->setText(QString());
-        label_imie_2->setText(QCoreApplication::translate("Pacjent", "Imie:", nullptr));
     } // retranslateUi
 
 };

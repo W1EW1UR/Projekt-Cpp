@@ -915,6 +915,8 @@ C-Project_autogen/timestamp: \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/dodaj_wizyte.cpp \
+	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/dodaj_wizyte.h \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/logowanie.cpp \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/logowanie.h \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/main.cpp \
@@ -926,6 +928,7 @@ C-Project_autogen/timestamp: \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/pacjent.h \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/wizyta.cpp \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/wizyta.h \
+	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/dodaj_wizyte.ui \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/logowanie.ui \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/mainwindow.ui \
 	C:/Users/kapim/Desktop/procpp/Projekt/C-Project/okno2.ui \

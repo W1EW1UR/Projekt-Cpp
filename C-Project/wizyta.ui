@@ -100,6 +100,27 @@
     </rect>
    </property>
   </widget>
+  <widget class="QPushButton" name="edit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Dodaj</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

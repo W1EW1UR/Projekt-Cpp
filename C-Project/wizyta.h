@@ -24,6 +24,11 @@ public:
 
     int poziom_autoryzacji;
 
+    int id_pacjenta;
+
+private slots:
+    void on_edit_clicked();
+
 private:
     Ui::Wizyta *ui;
 

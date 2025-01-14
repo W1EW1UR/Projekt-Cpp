@@ -14,6 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QTextEdit>
 
@@ -28,6 +29,7 @@ public:
     QLabel *label_imie;
     QTextEdit *textEdit_2;
     QTableView *tabela_wizyt;
+    QPushButton *edit;
 
     void setupUi(QDialog *Wizyta)
     {
@@ -58,6 +60,13 @@ public:
         tabela_wizyt = new QTableView(Wizyta);
         tabela_wizyt->setObjectName("tabela_wizyt");
         tabela_wizyt->setGeometry(QRect(210, 130, 651, 192));
+        edit = new QPushButton(Wizyta);
+        edit->setObjectName("edit");
+        edit->setEnabled(true);
+        edit->setGeometry(QRect(10, 230, 141, 51));
+        QFont font;
+        font.setPointSize(14);
+        edit->setFont(font);
 
         retranslateUi(Wizyta);
 
@@ -70,6 +79,7 @@ public:
         label_nazwisko->setText(QCoreApplication::translate("Wizyta", "Nazwisko:", nullptr));
         zdj_pacjenta->setText(QString());
         label_imie->setText(QCoreApplication::translate("Wizyta", "Imie:", nullptr));
+        edit->setText(QCoreApplication::translate("Wizyta", "Dodaj", nullptr));
     } // retranslateUi
 
 };
