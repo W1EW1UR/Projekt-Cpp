@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>180</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -42,7 +42,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>180</y>
+      <y>240</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -279,6 +279,27 @@
     </property>
     <property name="text">
      <string>Podgląd</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="wizyty">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Wizyty</string>
     </property>
    </widget>
   </widget>

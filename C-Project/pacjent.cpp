@@ -1,6 +1,6 @@
 #include "pacjent.h"
 #include "ui_pacjent.h"
-
+#include <QMessageBox>
 #include <QDir>
 
 
@@ -9,15 +9,29 @@ Pacjent::Pacjent(int id_pacjenta, QDir pro_path, int poziom, QWidget *parent) :
     ui(new Ui::Pacjent),
     id(id_pacjenta),
     path(pro_path)
-
 {
+    qDebug()<<poziom<<"PRZED";
     ui->setupUi(this);
     if(poziom==0)
     {
+        qDebug()<<poziom<<"SCHOWANY";
         ui->edit->hide();
+        ui->textEdit->setDisabled(true);
+        ui->textEdit_2->setDisabled(true);
+        ui->textEdit_3->setDisabled(true);
+        ui->textEdit_4->setDisabled(true);
+        ui->opis->setDisabled(true);
     }
-    else{
+    else
+    {
+        qDebug()<<poziom<<"POKAZANY";
         ui->edit->show();
+        ui->textEdit->setDisabled(false);
+        ui->textEdit_2->setDisabled(false);
+        ui->textEdit_3->setDisabled(false);
+        ui->textEdit_4->setDisabled(false);
+        ui->opis->setDisabled(false);
+
     }
 
     QSqlDatabase baza = QSqlDatabase::database();
@@ -64,6 +78,35 @@ Pacjent::~Pacjent()
     delete ui;
 }
 
-int id_pacjenta = -1;
+void Pacjent::on_edit_clicked()
+{
 
-QDir pro_path;
+    QSqlDatabase baza = QSqlDatabase::database();
+    QSqlQuery qry;
+    QString imie,nazwisko,pokoj,pesel,opis;
+
+    imie =  ui->textEdit->toPlainText();
+    nazwisko = ui->textEdit_2->toPlainText();
+    pokoj = ui->textEdit_3->toPlainText();
+    pesel = ui->textEdit_4->toPlainText();
+    opis = ui->opis->toPlainText();
+
+    qry.prepare("UPDATE rejestr SET imie=:imie,nazwisko=:nazwisko,pesel=:pesel,nr=:nr,opis=:opis WHERE id = :id");
+    qry.bindValue(":id",id);
+    qry.bindValue(":imie",imie);
+    qry.bindValue(":nazwisko",nazwisko);
+    qry.bindValue(":nr",pokoj);
+    qry.bindValue(":pesel",pesel);
+    qry.bindValue(":opis",opis);
+
+    if(qry.exec())
+    {
+        QMessageBox::information(this,"Edycja danych","Zapisano");
+    }
+    else
+    {
+        QMessageBox::critical(this,tr("error"),qry.lastError().text());
+    }
+
+}
+

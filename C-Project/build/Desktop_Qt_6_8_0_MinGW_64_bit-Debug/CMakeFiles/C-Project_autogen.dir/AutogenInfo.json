@@ -340,6 +340,12 @@
 			"MU",
 			"EWIEGA46WW/moc_pacjent.cpp",
 			null
+		],
+		[
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/wizyta.h",
+			"MU",
+			"EWIEGA46WW/moc_wizyta.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -437,6 +443,11 @@
 		],
 		[
 			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/pacjent.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/kapim/Desktop/procpp/Projekt/C-Project/wizyta.cpp",
 			"MU",
 			null
 		]

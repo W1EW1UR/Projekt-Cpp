@@ -3,3 +3,4 @@
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_okno2.cpp"
 #include "EWIEGA46WW/moc_pacjent.cpp"
+#include "EWIEGA46WW/moc_wizyta.cpp"

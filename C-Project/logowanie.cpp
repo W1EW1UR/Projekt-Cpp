@@ -17,7 +17,7 @@ logowanie::~logowanie()
 
 void logowanie::on_pomin_clicked()
 {
-    poziom =0;
+    poziom = 0;
     // Ukryj okno dialogowe
     this->hide();
 
@@ -37,7 +37,7 @@ void logowanie::on_zaloguj_clicked()
 
     if(QString::compare(login, "123", Qt::CaseInsensitive) == 0 && haslo =="123")
     {
-        poziom =1;
+        poziom = 1;
         this->hide();
         MainWindow *mainWindow = new MainWindow(poziom,this);
         mainWindow->show();

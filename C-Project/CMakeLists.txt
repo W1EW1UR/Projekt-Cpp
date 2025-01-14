@@ -27,6 +27,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         logowanie.h logowanie.cpp logowanie.ui
         pacjent.h pacjent.cpp pacjent.ui
+        wizyta.h wizyta.cpp wizyta.ui
 
     )
 # Define target properties for Android with Qt 6 as:

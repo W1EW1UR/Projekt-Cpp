@@ -2,6 +2,7 @@
 #include "okno2.h"
 #include "logowanie.h"
 #include "pacjent.h"
+#include "wizyta.h"
 
 #include <QMessageBox>
 #include <QPixmap>
@@ -12,9 +13,13 @@
 
 MainWindow::MainWindow(int poziom,QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),
+    poziom(poziom)
+
 {
     ui->setupUi(this);
+
+    qDebug()<<poziom<<" POZIOM AUTORYZACJI";
 
     // Ustawianie głównej ścieżki
     QString path = QDir::currentPath();
@@ -150,14 +155,23 @@ void MainWindow::on_back_clicked()
 
 
 
+
 void MainWindow::on_edit_clicked()
 {
-    // Tworzymy dialog wyszukiwania i przekazujemy dane
 
-    qDebug() <<"Przed oknem ||"<<"ID:"<<id_pacjenta<<"PATH:"<<pro_path;
     Pacjent Okno(id_pacjenta,pro_path,poziom ,this);
 
     // Ustawiamy modalność i uruchamiamy dialog
     Okno.setModal(true);
     Okno.exec();
 }
+
+void MainWindow::on_wizyty_clicked()
+{
+
+    Wizyta Okno(id_pacjenta,pro_path,poziom ,this);
+
+    Okno.setModal(true);
+    Okno.exec();
+}
+

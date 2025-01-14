@@ -42,6 +42,7 @@ public:
     QTextEdit *textEdit_4;
     QPushButton *back;
     QPushButton *edit;
+    QPushButton *wizyty;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -55,14 +56,14 @@ public:
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName("pushButton_3");
         pushButton_3->setEnabled(true);
-        pushButton_3->setGeometry(QRect(20, 110, 141, 51));
+        pushButton_3->setGeometry(QRect(20, 180, 141, 51));
         QFont font;
         font.setPointSize(14);
         pushButton_3->setFont(font);
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setEnabled(true);
-        pushButton_2->setGeometry(QRect(20, 180, 141, 51));
+        pushButton_2->setGeometry(QRect(20, 240, 141, 51));
         pushButton_2->setFont(font);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
@@ -124,6 +125,11 @@ public:
         edit->setEnabled(true);
         edit->setGeometry(QRect(550, 280, 141, 51));
         edit->setFont(font);
+        wizyty = new QPushButton(centralwidget);
+        wizyty->setObjectName("wizyty");
+        wizyty->setEnabled(true);
+        wizyty->setGeometry(QRect(20, 120, 141, 51));
+        wizyty->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -152,6 +158,7 @@ public:
         label_pesel->setText(QCoreApplication::translate("MainWindow", "Pesel:", nullptr));
         back->setText(QCoreApplication::translate("MainWindow", "Wr\303\263\304\207", nullptr));
         edit->setText(QCoreApplication::translate("MainWindow", "Podgl\304\205d", nullptr));
+        wizyty->setText(QCoreApplication::translate("MainWindow", "Wizyty", nullptr));
     } // retranslateUi
 
 };

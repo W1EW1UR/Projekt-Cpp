@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Wizyta</class>
+ <widget class="QDialog" name="Wizyta">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>870</width>
+    <height>348</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_nazwisko">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>70</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nazwisko:</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>30</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="zdj_pacjenta">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>171</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_imie">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imie:</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>90</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tabela_wizyt">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>130</y>
+     <width>651</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

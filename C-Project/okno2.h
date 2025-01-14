@@ -16,8 +16,11 @@ class Okno2 : public QDialog
 public:
     explicit Okno2(QWidget *parent = nullptr);
     ~Okno2();
-signals:
+    signals:
     void dataAdded();  // Sygnał, który będzie emitowany po dodaniu danych do bazy
+
+protected:
+  void closeEvent(QCloseEvent *event) override;  // Nadpisanie closeEvent
 
 private slots:
     void on_pushButton_clicked();

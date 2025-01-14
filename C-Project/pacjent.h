@@ -19,7 +19,10 @@ public:
     explicit Pacjent(int id_pacjenta,QDir pro_path,int poziom,QWidget *parent = nullptr);
     ~Pacjent();
 
-    int poziom;
+    int poziom_autoryzacji;
+
+private slots:
+    void on_edit_clicked();
 
 private:
     Ui::Pacjent *ui;
