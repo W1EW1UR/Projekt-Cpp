@@ -357,6 +357,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/dodaj_wizyte.h",
+			"MU",
+			"EWIEGA46WW/moc_dodaj_wizyte.cpp",
+			null
+		],
+		[
 			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/logowanie.h",
 			"MU",
 			"EWIEGA46WW/moc_logowanie.cpp",
@@ -369,15 +375,21 @@
 			null
 		],
 		[
-			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow_podglad.h",
-			"MU",
-			"EWIEGA46WW/moc_mainwindow_podglad.cpp",
-			null
-		],
-		[
 			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/okno2.h",
 			"MU",
 			"EWIEGA46WW/moc_okno2.cpp",
+			null
+		],
+		[
+			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/pacjent.h",
+			"MU",
+			"EWIEGA46WW/moc_pacjent.cpp",
+			null
+		],
+		[
+			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/wizyta.h",
+			"MU",
+			"EWIEGA46WW/moc_wizyta.cpp",
 			null
 		]
 	],
@@ -455,6 +467,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/dodaj_wizyte.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/logowanie.cpp",
 			"MU",
 			null
@@ -465,12 +482,13 @@
 			"MU",
 			null
 		],
+		[ "C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/okno2.cpp", "MU", null ],
 		[
-			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow_podglad.cpp",
+			"C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/pacjent.cpp",
 			"MU",
 			null
 		],
-		[ "C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/okno2.cpp", "MU", null ]
+		[ "C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/wizyta.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

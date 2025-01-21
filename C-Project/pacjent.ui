@@ -195,7 +195,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Edytuj</string>
+    <string>Zapisz</string>
    </property>
   </widget>
  </widget>

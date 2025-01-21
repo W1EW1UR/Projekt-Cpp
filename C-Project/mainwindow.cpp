@@ -133,6 +133,7 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
     ui->textEdit_2->setText(item->data(Qt::UserRole+2).toString());
     ui->textEdit_3->setText(item->data(Qt::UserRole+3).toString());
     ui->textEdit_4->setText(item->data(Qt::UserRole+4).toString());
+    ui->opis->setText(item->data(Qt::UserRole+5).toString());
 
 
     // Zdjęcie

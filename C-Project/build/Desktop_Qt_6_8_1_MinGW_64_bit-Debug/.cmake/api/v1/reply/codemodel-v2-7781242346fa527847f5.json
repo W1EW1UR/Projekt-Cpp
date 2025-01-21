@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-a7d8a5544e70e26f0b9e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "C-Project",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "C-Project::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C-Project-Debug-be7c853b15865a73476d.json",
+					"name" : "C-Project",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "C-Project_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C-Project_autogen-Debug-05c8e683b9db3d2de5d6.json",
+					"name" : "C-Project_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "C-Project_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C-Project_autogen_timestamp_deps-Debug-1a451cef5f70b7e2ab2c.json",
+					"name" : "C-Project_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/kapim/Desktop/Projekt-Cpp/C-Project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

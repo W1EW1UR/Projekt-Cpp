@@ -104,7 +104,7 @@
       <x>360</x>
       <y>30</y>
       <width>171</width>
-      <height>211</height>
+      <height>191</height>
      </rect>
     </property>
     <property name="text">
@@ -278,7 +278,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Podgląd</string>
+     <string>Edytuj</string>
     </property>
    </widget>
    <widget class="QPushButton" name="wizyty">
@@ -302,6 +302,38 @@
      <string>Wizyty</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_pesel_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>230</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pesel:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="opis">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>250</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -309,7 +341,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

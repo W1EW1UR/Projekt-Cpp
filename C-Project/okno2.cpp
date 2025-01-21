@@ -50,6 +50,7 @@ void Okno2::on_pushButton_clicked()
     {
         QMessageBox::information(this,"Zapisywanie danych","Zapisano");
         emit dataAdded();
+        this->close();
     }
     else
     {

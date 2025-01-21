@@ -22,7 +22,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Okno2
 {
 public:
-    QPlainTextEdit *plainTextEdit;
+    QPlainTextEdit *opis;
     QLabel *label;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
@@ -39,12 +39,12 @@ public:
         if (Okno2->objectName().isEmpty())
             Okno2->setObjectName("Okno2");
         Okno2->resize(400, 300);
-        plainTextEdit = new QPlainTextEdit(Okno2);
-        plainTextEdit->setObjectName("plainTextEdit");
-        plainTextEdit->setGeometry(QRect(160, 160, 221, 121));
+        opis = new QPlainTextEdit(Okno2);
+        opis->setObjectName("opis");
+        opis->setGeometry(QRect(160, 160, 221, 121));
         label = new QLabel(Okno2);
         label->setObjectName("label");
-        label->setGeometry(QRect(160, 130, 41, 16));
+        label->setGeometry(QRect(160, 140, 41, 16));
         lineEdit = new QLineEdit(Okno2);
         lineEdit->setObjectName("lineEdit");
         lineEdit->setGeometry(QRect(220, 10, 161, 22));
@@ -84,7 +84,7 @@ public:
     void retranslateUi(QDialog *Okno2)
     {
         Okno2->setWindowTitle(QCoreApplication::translate("Okno2", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("Okno2", "Opis", nullptr));
+        label->setText(QCoreApplication::translate("Okno2", "OPIS:", nullptr));
         label_2->setText(QCoreApplication::translate("Okno2", "IMIE:", nullptr));
         label_3->setText(QCoreApplication::translate("Okno2", "  NAZWISKO:", nullptr));
         pushButton->setText(QCoreApplication::translate("Okno2", "Dodaj", nullptr));

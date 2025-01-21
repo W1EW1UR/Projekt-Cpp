@@ -1,6 +1,7 @@
 C-Project_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/QDeadlineTimer \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/QDebug \
+	C:/Qt/6.8.1/mingw_64/include/QtCore/QDir \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/QFileInfo \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/QHash \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/QList \
@@ -275,6 +276,7 @@ C-Project_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qxpfunctional.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qxptype_traits.h \
 	C:/Qt/6.8.1/mingw_64/include/QtCore/qyieldcpu.h \
+	C:/Qt/6.8.1/mingw_64/include/QtGui/QStandardItemModel \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qaction.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qbitmap.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qbrush.h \
@@ -294,6 +296,7 @@ C-Project_autogen/timestamp: \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qregion.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qrgb.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qrgba64.h \
+	C:/Qt/6.8.1/mingw_64/include/QtGui/qstandarditemmodel.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qtgui-config.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qtguiexports.h \
 	C:/Qt/6.8.1/mingw_64/include/QtGui/qtguiglobal.h \
@@ -951,17 +954,23 @@ C-Project_autogen/timestamp: \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/dodaj_wizyte.cpp \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/dodaj_wizyte.h \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/logowanie.cpp \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/logowanie.h \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/main.cpp \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow.cpp \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow.h \
-	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow_podglad.cpp \
-	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow_podglad.h \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/okno2.cpp \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/okno2.h \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/pacjent.cpp \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/pacjent.h \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/wizyta.cpp \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/wizyta.h \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/dodaj_wizyte.ui \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/logowanie.ui \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow.ui \
-	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/mainwindow_podglad.ui \
 	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/okno2.ui \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/pacjent.ui \
+	C:/Users/kapim/Desktop/Projekt-Cpp/C-Project/wizyta.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

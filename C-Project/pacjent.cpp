@@ -97,6 +97,7 @@ void Pacjent::on_edit_clicked()
     if(qry.exec())
     {
         QMessageBox::information(this,"Edycja danych","Zapisano");
+        this->close();
     }
     else
     {

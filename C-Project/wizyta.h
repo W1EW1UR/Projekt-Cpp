@@ -8,7 +8,6 @@
 #include <QFileInfo>
 #include <QStandardItemModel>
 
-
 namespace Ui {
 class Wizyta;
 }
@@ -23,15 +22,17 @@ public:
     ~Wizyta();
 
     int poziom_autoryzacji;
-
     int id_pacjenta;
+
+    // Zmienna członkowska typu wskaźnikowego
+    QStandardItemModel *q_model;
 
 private slots:
     void on_edit_clicked();
+    void on_tabela_wizyt_clicked(const QModelIndex &index);
 
 private:
     Ui::Wizyta *ui;
-
     int id;
     QDir path;
 };

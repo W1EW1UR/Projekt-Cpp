@@ -43,7 +43,7 @@ void Dodaj_wizyte::on_edit_clicked()
     if(qry.exec())
     {
         QMessageBox::information(this,"Zapisywanie danych wizyty","Zapisano");
-
+        this->close();
     }
     else
     {
